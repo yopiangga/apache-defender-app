@@ -34,8 +34,7 @@ export function ContactSection() {
     formData.append("subject", form.subject);
     formData.append("message", form.message);
 
-    // api call here http://localhost:30001/u used axios
-    const res = await axios.post("http://34.101.111.90:3001/upload", formData);
+    const res = await axios.post("http://server.mogiro.site/upload", formData);
 
     console.log(res.data);
   };

@@ -29,5 +29,5 @@ app.post("/upload", (req, res) => {
 });
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server is running on http://34.101.111.90:${PORT}`);
+  console.log(`Server is running on http://server.mogiro.site:${PORT}`);
 });
