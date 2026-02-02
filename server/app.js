@@ -19,13 +19,16 @@ app.post("/upload", (req, res) => {
 
   let uploadedFile = req.files.file;
 
-  uploadedFile.mv(`./uploads/${uploadedFile.name}`, (err) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
+  uploadedFile.mv(
+    `/var/www/apache-defender-app/server/uploads/${uploadedFile.name}`,
+    (err) => {
+      if (err) {
+        return res.status(500).send(err);
+      }
 
-    res.send("File uploaded successfully!");
-  });
+      res.send("File uploaded successfully!");
+    },
+  );
 });
 
 app.listen(PORT, "0.0.0.0", () => {
