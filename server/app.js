@@ -19,7 +19,7 @@ app.post("/upload", (req, res) => {
 
   let uploadedFile = req.files.file;
 
-  uploadedFile.mv(`./server/uploads/${uploadedFile.name}`, (err) => {
+  uploadedFile.mv(`./uploads/${uploadedFile.name}`, (err) => {
     if (err) {
       return res.status(500).send(err);
     }
